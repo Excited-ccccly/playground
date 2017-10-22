@@ -4,6 +4,7 @@
 
 ### 2017/10/22
 
+* Add [Haskell](./haskell)
 * Add [wechat-server](./wechat-server)
 * Add [rx dotnet](./rx-dotnet)
 * Add [text editor kilo](./kilo)
