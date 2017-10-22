@@ -1,9 +1,10 @@
-# A playground for features of programming languages.
+# A playground
 
 ## Changelog
 
 ### 2017/10/22
 
+* Add [wechat-server](./wechat-server)
 * Add [rx dotnet](./rx-dotnet)
 * Add [text editor kilo](./kilo)
 

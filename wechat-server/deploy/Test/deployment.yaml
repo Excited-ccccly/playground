@@ -1,0 +1,42 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: wechat-server
+  name: wechat-server
+  namespace: dev-console
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: wechat-server
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: wechat-server
+    spec:
+      containers:
+      - image: registry.grootapp.com:5000/wechat-server:${version}
+        env:
+        - name: HOST
+          value: "grootmysql.ce4r7s1ijht2.rds.cn-north-1.amazonaws.com.cn"
+        - name: USER
+          value: "root"
+        - name: PASSWORD 
+          value: "sD%hs(df"
+        - name: TOKEN
+          value: "ccccly"
+        imagePullPolicy: IfNotPresent
+        name: wechat-server
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
