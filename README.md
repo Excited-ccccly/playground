@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 2017/10/22
+
+* Add [text editor kilo](./kilo)
+
 ### 2017/10/11
 
 * Add [dotnet roslyn demo](./dotnetXroslyn)
