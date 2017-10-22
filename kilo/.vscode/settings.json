@@ -1,6 +1,14 @@
 {
     "files.associations": {
         "stdio.h": "c",
-        "unistd.h": "c"
-    }
+        "unistd.h": "c",
+        "ctype.h": "c",
+        "stdlib.h": "c",
+        "termios.h": "c",
+        "cstdlib": "c",
+        "features.h": "c",
+        "types.h": "c",
+        "ttydefaults.h": "c"
+    },
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\bash.exe"
 }
