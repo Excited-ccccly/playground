@@ -4,6 +4,7 @@
 
 ### 2017/10/22
 
+* Add [rx dotnet](./rx-dotnet)
 * Add [text editor kilo](./kilo)
 
 ### 2017/10/11
