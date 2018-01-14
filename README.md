@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 2018/01/14
+
+* Add [SICP](./sicp)
+
 ### 2017/10/22
 
 * Add [Haskell](./haskell)
