@@ -90,7 +90,7 @@ usage(char *pname)
 int
 main(int argc, char *argv[])
 {
-    struct sigaction sa;
+    struct sigaction sa{};
 #define CMD_SIZE 10000
     char cmd[CMD_SIZE];
     pid_t pid;

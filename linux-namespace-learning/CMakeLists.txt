@@ -1,2 +1,2 @@
 set(CMAKE_CXX_STANDARD 11)
-add_executable(linux-namespace-learning main.cpp ns_exec.cpp unshare.cpp pidns_init_sleep.cpp multi_pidns.cpp ns_child_exec.cpp simple_init.cpp)
+add_executable(uts/demo_uts_namespaces.cpp uts/ns_exec.cpp uts/unshare.cpp pid/pidns_init_sleep.cpp pid/multi_pidns.cpp pid/ns_child_exec.cpp pid/simple_init.cpp pid/orphan.cpp pid/ns_run.cpp)

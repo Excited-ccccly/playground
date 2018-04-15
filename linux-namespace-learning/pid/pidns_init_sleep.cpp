@@ -29,16 +29,16 @@ childFunc(void *arg)
     printf("childFunc(): PID  = %ld\n", (long) getpid());
     printf("childFunc(): PPID = %ld\n", (long) getppid());
 
-    char *mount_point = arg;
+    auto *mount_point = (char*) arg;
 
-    if (mount_point != NULL) {
+    if (mount_point != nullptr) {
         mkdir(mount_point, 0555);       /* Create directory for mount point */
-        if (mount("proc", mount_point, "proc", 0, NULL) == -1)
+        if (mount("proc", mount_point, "proc", 0, nullptr) == -1)
             errExit("mount");
         printf("Mounting procfs at %s\n", mount_point);
     }
 
-    execlp("sleep", "sleep", "600", (char *) NULL);
+    execlp("sleep", "sleep", "600", (char *) nullptr);
     errExit("execlp");  /* Only reached if execlp() fails */
 }
 
@@ -61,7 +61,7 @@ main(int argc, char *argv[])
 
     printf("PID returned by clone(): %ld\n", (long) child_pid);
 
-    if (waitpid(child_pid, NULL, 0) == -1)      /* Wait for child */
+    if (waitpid(child_pid, nullptr, 0) == -1)      /* Wait for child */
         errExit("waitpid");
 
     exit(EXIT_SUCCESS);

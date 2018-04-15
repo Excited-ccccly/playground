@@ -8,10 +8,10 @@
 #define _GNU_SOURCE
 #include <sched.h>
 #include <unistd.h>
-#include <stdlib.h>
+#include <cstdlib>
 #include <sys/wait.h>
-#include <signal.h>
-#include <stdio.h>
+#include <csignal>
+#include <cstdio>
 
 /* A simple error-handling function: print an error message based
    on the value in 'errno' and terminate the calling process */
@@ -37,7 +37,7 @@ usage(char *pname)
 static int              /* Start function for cloned child */
 childFunc(void *arg)
 {
-    char **argv = arg;
+    auto **argv = (char**) arg;
 
     execvp(argv[0], &argv[0]);
     errExit("execvp");
@@ -88,7 +88,7 @@ main(int argc, char *argv[])
 
     /* Parent falls through to here */
 
-    if (waitpid(child_pid, NULL, 0) == -1)      /* Wait for child */
+    if (waitpid(child_pid, nullptr, 0) == -1)      /* Wait for child */
         errExit("waitpid");
 
     if (verbose)
