@@ -2,9 +2,13 @@
 
 ## Changelog
 
+### 2019/11/03
+
+* Add [ood-linux-find](./ood-linux-find/README.md)
+
 ### 2018/04/15
 
-* Add [linux-namespace-learning](./linux-namespace-learning)
+* Add [linux-namespace-learning](./linux-namespace-learning/README.md)
 
 ### 2018/01/14
 

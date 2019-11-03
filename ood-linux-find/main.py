@@ -2,8 +2,6 @@ from typing import List
 from entry import Entry
 from filters import Filter, FileExtensionFilter, SizeGreaterOrEqualFilter
 
-from flask import current_app
-
 class Context:
   """本次搜索执行的上下文
   :param entrypoint: 搜索的起始 entry
