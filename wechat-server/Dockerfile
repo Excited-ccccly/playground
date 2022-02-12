@@ -4,7 +4,7 @@ FROM groot.nanchao.org:5000/sluff-base:0.3
     RUN chown -R node:node /opt/app
     USER node
     RUN cd /opt/app &&\
-        npm set registry=https://registry.npm.taobao.org &&\
+        npm set registry=https://registry.npmmirror.com &&\
         npm install
     ENTRYPOINT ["npm", "start"]
     EXPOSE 3000
